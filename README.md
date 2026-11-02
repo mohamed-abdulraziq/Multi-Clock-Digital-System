@@ -1,4 +1,4 @@
-# Al-Tamaseh — Multi-Clock Digital System
+# Multi-Clock Digital System
 
 A modular multi-clock digital system implemented in Verilog/SystemVerilog. The design integrates UART communication, an asynchronous FIFO, a system controller, a register file, an ALU, and clock/reset management.
 
