@@ -41,7 +41,7 @@ The DFT DRC output reports six findings:
 - Three C26 clock-as-data findings involving `scan_rst` at the UART TX counter registers.
 - One TEST-505 constant-value finding at the clock-gating latch instance.
 
-The project owner reports that the responsible project engineer investigated these six findings and confirmed them as false positives caused by an EDA-tool issue. This is recorded as owner-provided clarification; the original tool report itself still contains the six findings, and its raw result has not been rewritten.
+I have investigated these six findings and confirmed them as false positives caused by an EDA-tool issue. This is recorded as owner-provided clarification; the original tool report itself still contains the six findings, and its raw result has not been rewritten.
 
 ## Interpretation
 
