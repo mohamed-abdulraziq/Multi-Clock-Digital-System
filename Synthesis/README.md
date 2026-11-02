@@ -1,7 +1,15 @@
 # Synthesis
 
-The project has a synthesis stage using Synopsys Design Compiler, as supported by the project artifacts available to the owner.
+The supplied Design Compiler reports for `SYSTEM_TOP` (23 October 2024) are documented in [Synthesis Reports](Reports/README.md).
 
-The original synthesis script, complete constraints, and a reviewed synthesis report package are not included in this initial public snapshot. For that reason, no synthesis area, timing, or power metrics are claimed in this folder yet.
+Key reported results:
+- 2,042 mapped cells, including 406 sequential cells.
+- Total cell area: 27,433.584466 technology-library area units (not mm²).
+- Worst reported setup slack: +17.95 ns.
+- Worst reported hold slack: +0.42 ns.
+- The constraints report states no violated constraints.
+- Early power estimate: approximately 0.296 mW, with low-effort analysis and incomplete activity annotation.
 
-Technology libraries, proprietary PDK files, and licensed standard-cell data are intentionally excluded.
+The `check_design` output contains warnings/findings and is not warning-free. See the report notes for scope and limitations.
+
+Technology-library names, licensed data, and machine-specific absolute paths are intentionally omitted from the public documentation.
