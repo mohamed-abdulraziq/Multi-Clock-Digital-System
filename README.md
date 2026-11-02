@@ -2,7 +2,7 @@
 
 A modular multi-clock digital system implemented in Verilog/SystemVerilog. The design integrates UART communication, an asynchronous FIFO, a system controller, a register file, an ALU, and clock/reset management.
 
-![Post-route physical implementation view](Documentation/images/Final_System_Physical_Design.jpg)
+![Post-route physical implementation view](Documentation/Final_System_Physical_Design.jpg)
 
 ## System architecture
 
