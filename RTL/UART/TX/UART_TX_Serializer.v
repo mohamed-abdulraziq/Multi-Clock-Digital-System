@@ -13,6 +13,8 @@ output  reg           Ser_Done_S
 reg   Ser_Done_C ;
 reg       [7:0]       Data ;
 
+integer               n ;
+
 always@(posedge clk_S or negedge rst_S)
   begin
     if (!rst_S)
@@ -24,11 +26,11 @@ always@(posedge clk_S or negedge rst_S)
       begin
         Data <= P_Data_S ;
       end
-    else if (Ser_En_S)
-      begin
-        Ser_Data_S <= Data[0] ;
-        Data <= Data >> 1 ;
-      end
+   else if (Ser_En_S)
+    begin
+      Ser_Data_S <= Data[0] ;
+      Data <= Data >> 1 ;
+    end
   end
 
 always@(posedge clk_S or negedge rst_S)
