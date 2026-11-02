@@ -9,18 +9,11 @@ This note records differences found by comparing the supplied `Final_System` spe
 
 The intended simulation/synthesis clock should be confirmed before claiming that the included testbench or a timing run exactly matches the specification.
 
-## 2. Register-file address range
-
-- Specification text describes normal register-file read/write addresses from `0x4` to `0x15`.
-- Current RTL defaults: `ADDR = 4` and `DEPTH = 16`, so the address bus can represent only `0x0` through `0xF`.
-
-The documented upper range cannot be represented by the current default address width/depth. The intended depth and address width need confirmation.
-
-## 3. ALU result width
+## 2. ALU result width
 
 The RTL parameterizes the ALU output as `OUT_WIDTH = 2 * OPER_WIDTH`; with the default 8-bit operands, the result bus is 16 bits. The system specification's ALU table and system-controller interface descriptions are not fully consistent about the result width. This repository documents the RTL declaration as implemented.
 
 
-## 4. Physical implementation scope
+## 3. Physical implementation scope
 
 The repository documents the available post-route timing, geometry, connectivity, and power-report summaries with their limitations. The Encounter screenshot is visual context; it is not, by itself, proof of complete DRC/LVS or foundry sign-off.
