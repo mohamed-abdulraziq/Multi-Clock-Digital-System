@@ -1,0 +1,30 @@
+# Simulation outputs
+*.vcd
+*.fst
+*.wlf
+*.vpd
+*.fsdb
+*.ucdb
+transcript
+work/
+simv*
+*.log
+*.jou
+*.str
+
+# EDA databases and generated implementation files
+*.db
+*.ddc
+*.sdf
+*.spf
+*.gds
+*.oas
+*.lef
+*.lib
+*.ndm
+*.nlib
+
+# Local/editor files
+.DS_Store
+Thumbs.db
+.vscode/
