@@ -20,10 +20,7 @@ The documented upper range cannot be represented by the current default address 
 
 The RTL parameterizes the ALU output as `OUT_WIDTH = 2 * OPER_WIDTH`; with the default 8-bit operands, the result bus is 16 bits. The system specification's ALU table and system-controller interface descriptions are not fully consistent about the result width. This repository documents the RTL declaration as implemented.
 
-## 4. Verification status
 
-The integrated testbench source is included, but a full simulator transcript showing the exact compile/run setup and final exit status is not currently included. No new simulation result is claimed by publishing the source.
-
-## 5. Physical implementation scope
+## 4. Physical implementation scope
 
 The repository documents the available post-route timing, geometry, connectivity, and power-report summaries with their limitations. The Encounter screenshot is visual context; it is not, by itself, proof of complete DRC/LVS or foundry sign-off.
