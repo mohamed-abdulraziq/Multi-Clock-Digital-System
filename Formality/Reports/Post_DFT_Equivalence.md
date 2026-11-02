@@ -13,6 +13,6 @@
 | Failing compare points | 0 |
 | Verification status | **SUCCEEDED** |
 
-The comparison setup enabled Synopsys Auto Setup. The four scan-output ports (`SO[3:0]`) were explicitly excluded from comparison because they are test-only ports added after scan insertion. The log also lists three unread DFF points under “Not Compared”; these should not be silently described as compared points.
+The comparison setup enabled Synopsys Auto Setup. The four scan-output ports (`SO[3:0]`) were explicitly excluded from comparison because they are test-only ports added after scan insertion.
 
 This confirms equivalence for the reported compare points under the documented setup. It is not ATPG pattern simulation or physical sign-off.
