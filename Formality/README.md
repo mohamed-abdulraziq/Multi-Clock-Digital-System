@@ -1,12 +1,16 @@
 # Formal Equivalence
 
-The available Formality logs record two equivalence runs:
+The supplied Synopsys Formality logs record two independent equivalence runs:
 
-1. Post-synthesis: reference RTL versus synthesized gate-level netlist.
-2. Post-DFT: reference RTL versus post-DFT gate-level netlist.
+1. Post-synthesis: RTL reference versus synthesized gate-level netlist.
+2. Post-DFT: RTL reference versus post-DFT gate-level netlist.
 
-Both reports summarize 386 passing compare points, with 0 failing, 0 aborted, and 0 unverified points. In the post-DFT comparison, four scan output ports were excluded from comparison.
+Both runs report **386 passing compare points** and **zero failing compare points**. Both used `synopsys_auto_setup`.
 
-The runs used Synopsys Formality with automatic setup enabled (`synopsys_auto_setup`). These results apply to the exact reference, implementation netlists, setup, and compare configuration used in those runs. They should not be read as proof for different constraints, netlists, or configurations.
+The post-DFT run explicitly excludes four scan-output ports from comparison. Its log also lists three unread DFF points under “Not Compared”; these are disclosed in the detailed report rather than counted as passing points.
 
-The original logs and SVF guidance files are not included in this public snapshot.
+Detailed results:
+- [Post-synthesis equivalence](Reports/Post_Synthesis_Equivalence.md)
+- [Post-DFT equivalence](Reports/Post_DFT_Equivalence.md)
+
+These results apply to the compare points reported under the documented Formality setup. They are not ATPG pattern simulation or physical sign-off.
