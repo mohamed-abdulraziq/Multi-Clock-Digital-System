@@ -1,13 +1,7 @@
 # Design-for-Test (DFT)
 
-The available DFT report describes scan insertion and reports:
+The supplied scan DFT output for `SYSTEM_TOP` reports 386 sequential cells, 385 valid scan cells, and 16,808 faults added to the fault list. The tool's estimated test coverage is 99.55%; the same report states zero internal ATPG patterns, so this is not ATPG pattern sign-off.
 
-- 386 sequential cells in the analyzed design.
-- 385 valid scan cells.
-- 16,808 faults added.
-- Estimated fault coverage: 99.55%.
-- Fault classification in the report: 16,413 detected, 321 undetectable, 50 ATPG-untestable, and 24 not detected; 0 possibly detected.
+The DFT DRC output lists six tool findings (five clock-related and one other). The project owner reports that the responsible project engineer investigated them and confirmed they were false positives caused by an EDA-tool issue. The report's original findings remain disclosed.
 
-The report also contains six tool-reported DFT findings (five clock-related and one other). The project owner states that these findings were investigated by the responsible project engineer and attributed to an EDA-tool issue rather than design defects. The raw report is not included here, so readers should treat the summary as contextual project information rather than an independently reproducible result.
-
-The reported 99.55% is an estimated coverage figure. It is not presented as proof of final ATPG pattern generation, pattern simulation, or production test sign-off.
+See [Detailed DFT Report](Reports/README.md).
