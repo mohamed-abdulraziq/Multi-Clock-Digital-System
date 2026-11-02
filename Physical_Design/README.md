@@ -1,24 +1,27 @@
 # Physical Design
 
-The available implementation artifacts include a GDSII layout, SDF timing annotation, DSPF parasitic data, gate-level netlists, and Encounter reports.
+The supplied Cadence Encounter implementation artifacts are associated with top cell `SYS_TOP`. The evidence includes a GDSII layout, SDF timing annotation, DSPF parasitic data, gate-level netlists, post-route timing summaries, a power estimate, geometry/connectivity checks, and a physical-layout screenshot.
 
-## Reported post-route timing
+## Post-route timing
 
 | Check | Worst slack | Total negative slack | Violating paths |
 |---|---:|---:|---:|
 | Setup | +2.649 ns | 0 | 0 |
 | Hold | +0.039 ns | 0 | 0 |
 
-The post-route summary reports 1,159 analyzed paths. The positive slack values apply to the supplied constraints and the reported analysis corner/mode.
+Both summaries report 1,159 analyzed paths. The hold margin is 39 ps.
 
-## Geometry and connectivity checks
+Detailed reports:
+- [Post-route timing](Reports/Post_Route_Timing.md)
+- [Power estimate](Reports/Power_Estimate.md)
+- [Geometry and connectivity checks](Reports/Geometry_and_Connectivity.md)
+- [Implementation artifact inventory](Reports/Implementation_Artifacts.md)
 
-- The Encounter geometry report reports no violations for the checks it ran; its command used `verifyGeometry -noMinArea`, so minimum-area checking was excluded.
-- The connectivity report reports no problems or warnings for `verifyConnectivity -type all -noAntenna`.
-- This is not an LVS report and is not evidence of full foundry DRC/LVS sign-off.
+## Scope and limitations
 
-## Power estimate
+- Geometry: zero findings reported by `verifyGeometry -noMinArea`; minimum-area checking was excluded, so this is not full foundry DRC sign-off.
+- Connectivity: no problems or warnings reported by `verifyConnectivity -type all -noAntenna`; this is not LVS.
+- Power: 0.7142 mW preliminary estimate, with no activity file supplied and primary-input activity set to 0.2.
+- The available post-route summaries show positive setup and hold slack under the recorded constraints, but do not by themselves establish full MCMM sign-off.
 
-The available power report estimates 0.7142 mW total power. The report uses low-effort, zero-delay assumptions and lacks complete switching activity annotation, so this number is a preliminary tool estimate, not sign-off power.
-
-The binary layout, extracted parasitics, and raw tool reports are not included in this public snapshot. They may contain implementation or technology-specific information and require separate review before publication.
+**Naming note:** synthesis/Formality reports identify the design as `SYSTEM_TOP`, while Encounter reports identify it as `SYS_TOP`. The relationship should be confirmed before claiming exact top-cell identity. GDSII, SDF, DSPF, and technology-dependent netlists are intentionally not copied into this public snapshot; their existence and roles are documented in the artifact inventory.
