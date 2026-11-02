@@ -50,7 +50,7 @@ The specification lists `REF_CLK = 50 MHz` and `UART_CLK = 3.6864 MHz`. See [Sys
 
 ## Verification
 
-The integrated testbench is included in `Verification/SYSTEM_TB.v`. Its stimulus covers UART command-based register-file access, ALU operations, and configuration updates. The source contains output comparisons, but a complete simulator transcript is not currently included; therefore no PASS count or coverage percentage is claimed here.
+The integrated testbench is included in `Verification/SYSTEM_TB.v`. Its stimulus covers UART command-based register-file access, ALU operations, and configuration updates. The source contains output comparisons.
 
 ## ASIC implementation
 
@@ -72,7 +72,3 @@ A few differences exist between the supplied specification and the current RTL/t
 The available artifacts indicate the use of Synopsys Design Compiler, Synopsys Formality, DFT tooling, and Cadence Encounter. The original EDA scripts, complete constraints, licensed technology libraries, and some tool setup files are not included in this public snapshot. Reproducing the complete ASIC flow requires the relevant licensed tools, technology files, and project constraints.
 
 Proprietary PDK/library data, license material, extracted implementation databases, and environment-specific absolute paths are intentionally excluded.
-
-## License
-
-No license has been added. Until a license is selected, this repository is source-available for viewing but does not grant reuse rights.
