@@ -7,7 +7,7 @@ The supplied Synopsys Formality logs record two independent equivalence runs:
 
 Both runs report **386 passing compare points** and **zero failing compare points**. Both used `synopsys_auto_setup`.
 
-The post-DFT run explicitly excludes four scan-output ports from comparison. Its log also lists three unread DFF points under “Not Compared”; these are disclosed in the detailed report rather than counted as passing points.
+The post-DFT run explicitly excludes four scan-output ports from comparison.
 
 Detailed results:
 - [Post-synthesis equivalence](Reports/Post_Synthesis_Equivalence.md)
